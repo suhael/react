@@ -25,7 +25,8 @@ const contents = [
             {"title":"refs", "url":"learning_react/refs.html"},
             {"title":"star", "url":"learning_react/star.html"},
             {"title":"incorrect props", "url":"learning_react/incorrect_props.html"},
-            {"title":"recipes", "url":"learning_react/recipes.html"}
+            {"title":"recipes", "url":"learning_react/recipes.html"},
+            {"title":"form", "url":"learning_react/form.html"}
         ]
     },
     {
@@ -44,7 +45,7 @@ const contents = [
 
 ]
 
-const Contents = ({contents}) => 
+const Contents = ({contents}) =>
         <section>
             <h1>Contents</h1>
             {contents.map(({section, pages}, i) =>
@@ -59,7 +60,7 @@ const Contents = ({contents}) =>
             )}
         </section>
 render(
-    <Contents contents={contents} />, 
+    <Contents contents={contents} />,
     document.getElementById("page-container")
 )
 

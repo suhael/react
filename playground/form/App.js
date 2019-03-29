@@ -1,13 +1,11 @@
 import React from "react";
-import Counter from "./Counter";
-
-import './index.css';
+import Form from "./components/Form";
 
 function App() {
   return (
     <div className="App">
-          <h1>Hello React parcel</h1>
-          <Counter/>
+          <h1>This is the form</h1>
+          <Form/>
     </div>
   );
 }

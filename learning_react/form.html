@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>form</title>
+</head>
+<body>
+<div id="react-container"></div>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<script src="https://unpkg.com/prop-types/prop-types.js"></script>
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+<script type="text/babel">
+
+    const { Component } = React
+    const { render } = ReactDOM
+
+
+    const Form = ({validate=f=>f}) => {
+        let _name, _email
+
+        const submit = e => {
+            e.preventDefault()
+            validate(_name.value, _email.value)
+
+        }
+
+        return (
+            <form onSubmit={submit}>
+                <input ref={input => _name = input}
+                       type="text"
+                       placeholder="color title..." required/>
+                <input ref={input => _email = input}
+                       type="email" required/>
+                <button>ADD</button>
+            </form>
+        )
+    }
+
+    Form.propTypes = {
+        validate: PropTypes.func
+    }
+
+    const validate = (name, email) => {
+        console.log(`New entry: ${name} | ${email}`)
+    }
+
+
+
+    render(
+        <Form validate={validate}/>,
+        document.getElementById('react-container')
+    )
+
+</script>
+
+</body>
+</html>
