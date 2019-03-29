@@ -1,0 +1,13 @@
+/my-react-project/build/
+/my-react-project/node_modules/
+/node_modules/
+/my-react-project/package-lock.json
+/package-lock.json
+.DS_Store
+.idea/
+my-react-project/package-lock.json
+node_modules/
+package-lock.json
+/playground/form/package-lock.json
+/playground/form/node_modules/
+/playground/form/dist/

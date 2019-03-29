@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>on click</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+<div id="react-container"></div>
+
+
+<script src="https://unpkg.com/prop-types/prop-types.js"></script>
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+<script type="text/babel">
+
+    const { Component } = React
+    const { render } = ReactDOM
+
+    const Count = ({count}) => 
+        <h1>Count is {count}</h1>
+
+    Count.propTypes = {
+        count: PropTypes.number.isRequired
+    }
+
+    class Counter extends Component {
+
+        static propTypes = {
+            count: PropTypes.number
+        }
+
+        static defaultProps = {
+            count: 5
+        }
+
+        constructor(props) {
+            super(props)
+            this.state = {
+                count: props.count || 0
+            }
+            this.increment = this.increment.bind(this)
+        }
+
+        increment() {
+            this.setState({
+                count: this.state.count + 1
+            });
+        } 
+
+        render() {
+            const {count} = this.props
+            return (
+                <div>
+                    <Count count={this.state.count}/>
+                    <span onClick={() => this.increment()}>+</span>
+                </div>
+            )
+        }
+
+    }
+
+    render(
+        <Counter />,
+        document.getElementById('react-container')
+    )
+
+
+</script>
+
+</body>
+</html>
