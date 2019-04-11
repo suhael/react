@@ -1,0 +1,31 @@
+{
+  "name": "colour-picker",
+  "version": "1.0.0-beta.1",
+  "scripts": {
+    "build": "parcel build index.html --no-cache --public-url ./",
+    "start": "parcel index.html",
+    "serve": "serve -s dist"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "uuid": "3.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-minify": "^0.2.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "css-loader": "0.28.7",
+    "node-sass": "^4.7.2",
+    "opener": "1.4.3",
+    "parcel-bundler": "^1.4.1",
+    "postcss-loader": "2.0.6",
+    "sass": "^1.17.4",
+    "sass-loader": "6.0.6",
+    "style-loader": "0.18.2"
+  }
+}

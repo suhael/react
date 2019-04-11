@@ -1,0 +1,23 @@
+{
+  "name": "simple-example",
+  "version": "1.0.0-beta.1",
+  "scripts": {
+    "build": "parcel build src/index.html --no-cache --public-url ./",
+    "start": "parcel src/index.html",
+    "serve": "serve -s dist"
+  },
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "prop-types": "^15.6.1",
+    "redux": "3.7.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.2.0",
+    "babel-preset-react": "^6.24.1",
+    "node-sass": "^4.7.2",
+    "parcel-bundler": "^1.4.1"
+  }
+}
