@@ -1,3 +1,6 @@
 export const CREATE_PERSON = "CREATE_PERSON";
 export const DELETE_PERSON = "DELETE_PERSON";
+
 export const CREATE_COURSE = "CREATE_COURSE";
+export const DISPLAY_COURSES = "DISPLAY_COURSES";
+export const LOAD_COURSES = "LOAD_COURSES";

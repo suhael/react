@@ -21,10 +21,10 @@ export default {
       title: "jim"
     },
     {
-      title: "bob"
+      title: "perl"
     },
     {
-      title: "blam"
+      title: "java"
     }
   ]
 }
